@@ -111,7 +111,6 @@ let colorRating = faveColorFinder(`green`);
 
 console.log(colorRating);
 
-
 ////////////////// PROBLEM 7 ////////////////////
 let namesArr = ["Cameron", "Riley", "Eric", "Brenna", "Karl"];
 /*
@@ -122,6 +121,13 @@ let namesArr = ["Cameron", "Riley", "Eric", "Brenna", "Karl"];
 
 //CODE HERE
 
+function printAllNames() {
+  for (let i = 0; i < namesArr.length; i++) {
+    console.log(namesArr[i]);
+  }
+}
+printAllNames();
+
 ////////////////// PROBLEM 8 ////////////////////
 /*
   Create a function called thatsOdd that takes in a single argument (a number).
@@ -131,6 +137,17 @@ let namesArr = ["Cameron", "Riley", "Eric", "Brenna", "Karl"];
 */
 
 //CODE HERE
+
+function thatsOdd(number) {
+  console.log(number);
+  if (number % 2 === 0) {
+    return `That's not odd!`;
+  } else {
+    return `That is odd indeed!`;
+  }
+}
+let oddChecker = thatsOdd(3);
+console.log(oddChecker);
 
 ////////////////// PROBLEM 9 ////////////////////
 let bigOrSmallArray = [1, 101, 102, 2, 103, 4, 5, 6, 107];
@@ -145,6 +162,19 @@ let bigOrSmallArray = [1, 101, 102, 2, 103, 4, 5, 6, 107];
 
 //CODE HERE
 
+function bigOrSmall(arr) {
+  let answers = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 100) {
+      answers.push(`big`);
+    } else {
+      answers.push("small");
+    }
+  }
+  return answers;
+}
+let arrayEvaluator = bigOrSmall(bigOrSmallArray)
+//console.log(bigOrSmall(bigOrSmallArray));
 ////////////////// PROBLEM 10 ////////////////////
 let contestants = [
   "Katniss",
@@ -160,26 +190,49 @@ let contestants = [
 let loser = "Glimmer";
 /*
   Write a function that is called theEliminator, which takes in two arguments, contestants (which will each be an array of strings), and loser (which will be a string).
-  The function should loop over the array of contestant names. If the loser string appears in the array, splice it out. Return the new contestants array.
+  The function should loop over the array of contestant names. If the loser string appears in the array, splice it out. 
+  Return the new contestants array.
 */
 
 //CODE HERE
+
+function theEliminator(cont1, cont2){
+  for(let i = 0; i < cont1.length; i++){
+    if(cont1[i] === cont2){
+      cont1.splice(i, 1)
+    } 
+  } return cont1
+}
+let newContestants = theEliminator(contestants, loser)
+console.log(newContestants)
 
 ////////////////// PROBLEM 11 ////////////////////
 let sampleString = "Hi, my name is Kylo.";
 /*
-  Write a function that takes im one argument, a string. The function should then console.log that string, in entirely uppercase characters.
+  Write a function that takes im one argument, a string. The function should then console.log that string, 
+  in entirely uppercase characters.
 */
 
 //CODE HERE
+
+function upperCase(str){
+  console.log(str.toUpperCase())
+}
+upperCase(sampleString)
 
 ////////////////// PROBLEM 12 ////////////////////
 /*
-  Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
-  Create a variable called `totalFrogs` and set it equal to your function invoked, passing in the amount of gold you are willing to spend.
+  Write a function, naming it whatever you believe to be appropriate, 
+  that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. 
+  Your function should take in a single parameter, which is the amount of gold you are willing to spend. 
+  Your function should return a total amount of chocolate frogs you were able to purchase.
+
+  Create a variable called `totalFrogs` and set it equal to your function invoked, 
+  passing in the amount of gold you are willing to spend.
 */
 
 //CODE HERE
+
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
